@@ -1,16 +1,15 @@
-const { ApiError, Client, MailSendController } = require('twilio-sendgrid-v-3-apilib');
-// require('dotenv')
-// import.meta.env.VITE_API_KEY
+import { ApiError, Client, MailSendController } from 'twilio-sendgrid-v-3-apilib';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const authKey = process.env.SENDGRID_API_KEY;
-console.log(authKey)
+const authKey = 'YOUR SENDGRID API KEY';
+
 const client = new Client({
     timeout: 0,
-    authorization:  `Bearer ${authKey}`
+    authorization: `Bearer ${authKey}`
 })
 const mailSendController = new MailSendController(client);
 
-console.log(authKey)
 const mailSend = async (base64Img, emailTo) => {
 
     const body = {
@@ -33,8 +32,6 @@ const mailSend = async (base64Img, emailTo) => {
             {
                 type: 'text/html',
                 value: '<html><body><img src=\"cid:myimagecid\"/></body></html>'
-                // value: '<html><body>gggg</body></html>'
-
             }
         ],
         attachments: [
@@ -59,7 +56,7 @@ const mailSend = async (base64Img, emailTo) => {
         }
     }
 }
-module.exports = mailSend;
-// mailSend("dfasf" , 'mehnoorsiddiqui9@gmail.com')
+
+export default mailSend;
 
 

@@ -1,6 +1,8 @@
-const Router = require("express");
-const {getAvailableDates,getCombinedImages }= require("./getCombinedImages");
-const mailSend = require("./mailSend");
+import Router  from "express"
+import getCombinedImages  from "./getCombinedImages"
+import mailSend from "./mailSend";
+import getAvailableDates from "./getAvailableDates";
+
 const api = Router();
 
 api.get("/emailImage", async (req, res) => {
@@ -10,4 +12,5 @@ api.get("/emailImage", async (req, res) => {
     res.send({ emailMeg: emailImage })
 });
 
-module.exports = api;
+// module.exports = api;
+export default api;

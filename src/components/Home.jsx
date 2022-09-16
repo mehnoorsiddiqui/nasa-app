@@ -12,7 +12,6 @@ function Home() {
 	useEffect(() => {
 		globeEl.current.controls().autoRotate = true;
 		globeEl.current.controls().autoRotateSpeed = 0.5;
-		// globeEl.current.pointOfView({ altitude: 4 }, 5000);
 	}, []);
 
 	const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -23,7 +22,7 @@ function Home() {
 		setEmail('');
 		e.preventDefault();
 		if (email && email.length && email.match(isValidEmail)) {
-			const emailed = await fetch(`/api/emailImage?userEmail=${email}`);
+		 await fetch(`/api/emailImage?userEmail=${email}`);
 		} else {
 			setError('Email is invalid');
 		}

@@ -1038,8 +1038,7 @@ async getSingleImageInPNG(
 const year = '2015';
 const month = '10';
 const day = '31';
-const imageQuality = 'png';
-const imageTitle = 'epic_1b_20151031074844.png';
+const ImageQuality: ImageQualityEnum = {'' : null, '' : null, '' : null } const imageTitle = 'epic_1b_20151031074844.png';
 try {
   const { result, ...httpResponse } = await naturalColorController.getSingleImageInPNG(year, month, day, imageQuality, imageTitle);
   // Get more response info...
@@ -1084,8 +1083,7 @@ async getCombinedImagesOnADate(
 ```ts
 const date = '2016-10-31';
 const gridColumns = 2;
-const imageQuality = 'jpg';
-try {
+const ImageQuality: ImageQualityEnum = {'' : null, '' : null, '' : null } try {
   const { result, ...httpResponse } = await naturalColorController.getCombinedImagesOnADate(date, gridColumns, imageQuality);
   // Get more response info...
   // const { statusCode, headers } = httpResponse;
@@ -1127,10 +1125,8 @@ async getSolarEclipseDays(
 ## Example Usage
 
 ```ts
-const date = '2017-08-21';
-const gridColumns = 2;
-const imageQuality = 'jpg';
-try {
+const Date: SolarEclipseDatesEnum = {'' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null } const gridColumns = 2;
+const ImageQuality: ImageQualityEnum = {'' : null, '' : null, '' : null } try {
   const { result, ...httpResponse } = await naturalColorController.getSolarEclipseDays(date, gridColumns, imageQuality);
   // Get more response info...
   // const { statusCode, headers } = httpResponse;
@@ -1172,10 +1168,8 @@ async getLunarTransitDays(
 ## Example Usage
 
 ```ts
-const date = '2021-02-11';
-const gridColumns = 2;
-const imageQuality = 'jpg';
-try {
+const Date: LunarTransitDatesEnum = {'' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null, '' : null } const gridColumns = 2;
+const ImageQuality: ImageQualityEnum = {'' : null, '' : null, '' : null } try {
   const { result, ...httpResponse } = await naturalColorController.getLunarTransitDays(date, gridColumns, imageQuality);
   // Get more response info...
   // const { statusCode, headers } = httpResponse;

@@ -1,6 +1,6 @@
 // Import the dependencies
-const express = require("express");
-const api = require('./api')
+import express from 'express'
+import api from './api'
 
 // Create an express server
 const app = express();
@@ -16,7 +16,5 @@ if (process.env.NODE_ENV === 'production') {
   app.listen(5000, () => console.log('listening on port 5000'));
 }
 
-
-
-
-module.exports = app;
+// module.exports = app;
+export default app;
