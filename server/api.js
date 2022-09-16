@@ -12,5 +12,4 @@ api.get("/emailImage", async (req, res) => {
     res.send({ emailMeg: emailImage })
 });
 
-// module.exports = api;
 export default api;

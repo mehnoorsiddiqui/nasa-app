@@ -50,10 +50,6 @@ const mailSend = async (base64Img, emailTo) => {
         return "email sent"
     } catch (error) {
         console.log(error)
-        if (error instanceof ApiError) {
-            const errors = error.result;
-
-        }
     }
 }
 
