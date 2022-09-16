@@ -24,7 +24,7 @@ function Home() {
 		if (email && email.length && email.match(isValidEmail)) {
 		 await fetch(`/api/emailImage?userEmail=${email}`);
 		} else {
-			setError('Email is invalid');
+			setError('Invalid Email');
 		}
 	};
 
@@ -54,6 +54,7 @@ function Home() {
 
 					 {error && <p  className={styles.error}>{error}</p>}
 
+					<p className={styles.disclaimer}> Your email address will not be stored by APIMatic</p>
 					<button className={styles.button} onClick={handleEmail}>
 						Email me a picture from nasa
 					</button>
