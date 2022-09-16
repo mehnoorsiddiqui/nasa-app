@@ -1,7 +1,4 @@
-# React⚛️ + Vite⚡ + express
-
-This demo uses Vite to build an app with a React front end
-and a Node/Express backend running in thee same repl.
+# NASA App
 
 ## React For Front-End Development
 
