@@ -2,7 +2,7 @@ import { ApiError, Client, MailSendController } from 'twilio-sendgrid-v-3-apilib
 import dotenv from 'dotenv';
 dotenv.config();
 
-const authKey = 'YOUR SENDGRID API KEY';
+const authKey = 'YOUR_AUTH_KEY';
 
 const client = new Client({
     timeout: 0,
