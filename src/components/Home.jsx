@@ -17,6 +17,7 @@ function Home() {
 	const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 	const validateEmail = e => {
 		setEmail(e.target.value);
+		setError(null);
 	};
 	const handleEmail = async e => {
 		setEmail('');
@@ -54,15 +55,15 @@ function Home() {
 
 					 {error && <p  className={styles.error}>{error}</p>}
 
-					<p className={styles.disclaimer}> Your email address will not be stored by APIMatic</p>
+					<p className={styles.disclaimer}> *We promise not to send you any emails outside this demo</p>
 					<button className={styles.button} onClick={handleEmail}>
 						Email me a picture from nasa
 					</button>
+					<p className={styles.info}> It may take a couple of minutes to fetch a high resolution image from NASA</p>
 
 			
           <p className={styles.description}>
-             App is built with APIMatic SDK. It is using the NASA API and Sendgrid API for displaying the
-            contents(images/text)
+             This app is built using APIMatic's auto-generated SDKs for the NASA and SendGrid APIs.
           </p>
 				</Container>
 			</div>

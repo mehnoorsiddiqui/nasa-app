@@ -2,7 +2,7 @@ import { ApiError, Client, MailSendController } from 'twilio-sendgrid-v-3-apilib
 import dotenv from 'dotenv';
 dotenv.config();
 
-const authKey = 'YOUR_AUTH_KEY';
+const authKey = 'YOUR_API_KEY';
 
 const client = new Client({
     timeout: 0,
@@ -18,16 +18,16 @@ const mailSend = async (base64Img, emailTo) => {
                 to: [
                     {
                         email: emailTo,
-                        name: 'Mehnoor Siddiqui'
+                        name: emailTo
                     }
                 ],
             }
         ],
         from: {
-            email: 'mahnoor.siddiqui@apimatic.io',
-            name: 'Mahnoor'
+            email: 'developer@apimatic.io',
+            name: 'APIMatic'
         },
-        subject: 'Test email from APIMatic ',
+        subject: 'NASAs million mile views from APIMatic ',
         content: [
             {
                 type: 'text/html',
