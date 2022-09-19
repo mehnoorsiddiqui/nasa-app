@@ -29,8 +29,6 @@ const getCombinedImages = async (date) => {
 
 // STEP 3: copy the following lines to convert the stream into a base64 encoded string
 
-
-
 function streamToString(stream) {
   const chunks = [];
   return new Promise((resolve, reject) => {

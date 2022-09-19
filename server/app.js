@@ -5,7 +5,6 @@ import api from './api'
 // Create an express server
 const app = express();
 
-
 app.use("/api", api);
 
 if (process.env.NODE_ENV === 'production') {

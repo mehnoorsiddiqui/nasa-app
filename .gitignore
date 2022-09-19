@@ -8,12 +8,5 @@ package-lock.json
 Twilio+SendGrid+v3+API+SDK/package-lock.json
 Twilio+SendGrid+v3+API+SDK/node_modules/
 
-NASA+EPIC+API+SDK/package-lock.json
-NASA+EPIC+API+SDK/node_modules/
-
-.replit
-
-.upm/
-replit_zip_error_log.txt
-
-README.md
+NASA+EPIC+API/package-lock.json
+NASA+EPIC+API/node_modules/
